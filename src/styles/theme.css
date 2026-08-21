@@ -1,0 +1,16 @@
+:root {
+  --bg-primary: #0B1F14;
+  --bg-surface: #142A1E;
+  --bg-surface-hover: #1B3527;
+  --border-subtle: #24402F;
+  --accent-primary: #34E27A;
+  --accent-primary-dim: #1F8F52;
+  --text-primary: #F5F7F5;
+  --text-secondary: #8FA396;
+  --status-critical: #EF4444;
+  --status-warning: #F5A623;
+  --status-healthy: #34E27A;
+  --status-info: #3B82F6;
+  --radius-card: 16px;
+  --radius-pill: 999px;
+}
