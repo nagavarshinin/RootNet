@@ -1,6 +1,9 @@
 import React from 'react';
 import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
 import ThemeShowcase from './pages/ThemeShowcase';
+import OemDashboard from './pages/OemDashboard';
+import ServiceCenter from './pages/ServiceCenter';
+import OwnerApp from './pages/OwnerApp';
 
 const Landing = () => (
   <div className="min-h-screen flex flex-col items-center justify-center space-y-8 p-6">
@@ -40,9 +43,9 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Landing />} />
         <Route path="/theme" element={<ThemeShowcase />} />
-        <Route path="/oem" element={<div className="p-8 text-center"><h1 className="text-2xl font-bold">OEM Dashboard</h1><p className="text-text-secondary mt-2">Work in progress...</p></div>} />
-        <Route path="/service" element={<div className="p-8 text-center"><h1 className="text-2xl font-bold">Service Center</h1><p className="text-text-secondary mt-2">Work in progress...</p></div>} />
-        <Route path="/owner" element={<div className="p-8 text-center max-w-[430px] mx-auto border-x border-border-subtle min-h-screen"><h1 className="text-2xl font-bold">Owner App</h1><p className="text-text-secondary mt-2">Mobile view in progress...</p></div>} />
+        <Route path="/oem" element={<OemDashboard />} />
+        <Route path="/service" element={<ServiceCenter />} />
+        <Route path="/owner" element={<OwnerApp />} />
       </Routes>
     </BrowserRouter>
   );

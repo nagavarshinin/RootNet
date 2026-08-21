@@ -1,5 +1,5 @@
 import React from 'react';
-import { LucideIcon, MoreVertical } from 'lucide-react';
+import { MoreVertical, type LucideIcon } from 'lucide-react';
 
 interface AlertCardProps {
   title: string;
