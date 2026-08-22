@@ -8,6 +8,7 @@ import { AppointmentCard } from '../components/AppointmentCard';
 import { Modal } from '../components/Modal';
 import { mockVehicles, mockTechnicians, mockAppointments } from '../data/mockData';
 import type { Appointment, Technician } from '../data/mockData';
+import { mapSeverityToStatus } from '../utils/severity';
 export const ServiceCenter: React.FC = () => {
   const [technicians, setTechnicians] = useState<Technician[]>(mockTechnicians);
   const [appointments, setAppointments] = useState<Appointment[]>(mockAppointments);
@@ -94,7 +95,7 @@ export const ServiceCenter: React.FC = () => {
                     licensePlate={vehicle.licensePlate}
                     bay={vehicle.bay}
                     faultTitle={fault.title}
-                    severity={fault.severity as any}
+                    severity={mapSeverityToStatus(fault.severity)}
                     onAssign={() => handleAssignClick(vehicle.id, fault.title)}
                     onRunDiagnostics={() => { }}
                     showAssign={fault.severity === 'critical'}

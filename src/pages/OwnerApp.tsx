@@ -6,6 +6,7 @@ import { Modal } from '../components/Modal';
 import { AlertTriangle, ArrowRight } from 'lucide-react';
 import { mockVehicles } from '../data/mockData';
 import { StatusBadge } from '../components/StatusBadge';
+import { mapSeverityToStatus } from '../utils/severity';
 
 export const OwnerApp: React.FC = () => {
   const [isBookingModalOpen, setIsBookingModalOpen] = useState(false);
@@ -126,9 +127,9 @@ export const OwnerApp: React.FC = () => {
 
       {/* Fault Detail Modal */}
       <Modal isOpen={isFaultDetailOpen} onClose={() => setIsFaultDetailOpen(false)} title="Fault Details">
-         <div className="space-y-4">
+          <div className="space-y-4">
             <h3 className="text-lg font-bold text-text-primary">{activeFault?.title}</h3>
-            <StatusBadge status={activeFault?.severity as any} />
+            <StatusBadge status={mapSeverityToStatus(activeFault?.severity)} />
             <p className="text-text-secondary text-sm mt-4">{activeFault?.description}</p>
          </div>
       </Modal>
